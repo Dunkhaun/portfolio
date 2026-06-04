@@ -2,7 +2,7 @@
 
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
-export type TabType = 'home' | 'about' | 'projects' | 'skills' | 'contact' | 'project';
+export type TabType = 'home' | 'about' | 'projects' | 'skills' | 'contact' | 'project' | 'doom';
 
 export interface Tab {
   id: string;

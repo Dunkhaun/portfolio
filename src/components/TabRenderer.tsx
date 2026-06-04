@@ -6,6 +6,7 @@ import ProjectsTab from './tabs/ProjectsTab';
 import ProjectDetailTab from './tabs/ProjectDetailTab';
 import SkillsTab from './tabs/SkillsTab';
 import ContactTab from './tabs/ContactTab';
+import DoomTab from './tabs/DoomTab';
 
 export function TabRenderer() {
   const { tabs, activeTabId } = useBrowser();
@@ -32,6 +33,7 @@ export function TabRenderer() {
             {tab.type === 'project' && <ProjectDetailTab projectId={tab.projectId!} />}
             {tab.type === 'skills' && <SkillsTab />}
             {tab.type === 'contact' && <ContactTab />}
+            {tab.type === 'doom' && <DoomTab />}
           </div>
         );
       })}

@@ -36,7 +36,7 @@ export function FakeConsole() {
       case 'help':
         setHistory(prev => [...prev, { 
           type: 'output', 
-          text: 'Available commands:\n- about\n- projects\n- contact\n- resume\n- dinosaur\n- clear\n- exit' 
+          text: 'Available commands:\n- about\n- projects\n- contact\n- resume\n- dinosaur\n- doom\n- clear\n- exit' 
         }]);
         break;
       case 'clear':
@@ -64,6 +64,10 @@ export function FakeConsole() {
       case 'dinosaur':
         setIsDinoActive(true);
         setHistory(prev => [...prev, { type: 'output', text: '🦖 WARNING: Summoning dinosaur... Warning: Meteor detected in local airspace!' }]);
+        break;
+      case 'doom':
+        openTab({ id: 'doom', title: 'Doom (1993)', type: 'doom', url: 'https://myportfolio.dev/doom' });
+        setHistory(prev => [...prev, { type: 'output', text: 'Initializing MS-DOS Emulation... Loading Doom (1993)...' }]);
         break;
       case 'sudo':
         if (args[1] === 'hire-me') {
