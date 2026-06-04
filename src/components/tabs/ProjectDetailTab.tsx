@@ -18,9 +18,19 @@ export default function ProjectDetailTab({ projectId }: { projectId: string }) {
         animate={{ opacity: 1, y: 0 }}
         className="mb-12"
       >
-        <div className={`w-full h-64 md:h-96 rounded-2xl bg-gradient-to-br ${project.color} mb-8 flex items-center justify-center relative overflow-hidden border border-slate-700/50 shadow-2xl`}>
-          <Monitor size={80} className="text-white/20" />
-          <div className="absolute inset-0 bg-black/20" />
+        <div className={`w-full h-64 md:h-96 rounded-2xl mb-8 flex items-center justify-center relative overflow-hidden border border-slate-700/50 shadow-2xl ${!project.image ? `bg-gradient-to-br ${project.color}` : ''}`}>
+          {project.image ? (
+            <img
+              src={project.image}
+              alt={`${project.title} screenshot`}
+              className="w-full h-full object-cover"
+            />
+          ) : (
+            <>
+              <Monitor size={80} className="text-white/20" />
+              <div className="absolute inset-0 bg-black/20" />
+            </>
+          )}
         </div>
         
         <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">{project.title}</h1>

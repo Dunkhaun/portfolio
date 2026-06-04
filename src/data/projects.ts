@@ -28,7 +28,8 @@ export const projectsData: Project[] = [
     ],
     demoUrl: 'https://demo.landscaping.test',
     githubUrl: 'https://github.com/user/landscaping',
-    color: 'from-green-500 to-emerald-700'
+    color: 'from-green-500 to-emerald-700',
+    image: '/landscaping.png'
   },
   {
     id: 'restaurant',
@@ -45,7 +46,8 @@ export const projectsData: Project[] = [
     ],
     demoUrl: 'https://demo.restaurant.test',
     githubUrl: 'https://github.com/user/restaurant',
-    color: 'from-orange-500 to-red-600'
+    color: 'from-orange-500 to-red-600',
+    image: '/restraunt.png'
   },
   {
     id: 'church',
@@ -62,6 +64,7 @@ export const projectsData: Project[] = [
     ],
     demoUrl: 'https://demo.church.test',
     githubUrl: 'https://github.com/user/church',
-    color: 'from-blue-500 to-indigo-600'
+    color: 'from-blue-500 to-indigo-600',
+    image: '/church.png'
   }
 ];

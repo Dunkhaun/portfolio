@@ -38,12 +38,23 @@ export default function ProjectsTab() {
             onClick={() => handleOpenProject(project.id, project.title)}
             className="group cursor-pointer bg-slate-800/40 border border-slate-700/50 rounded-xl overflow-hidden hover:bg-slate-800/80 hover:border-slate-600 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-indigo-500/10 flex flex-col h-full"
           >
-            {/* Fake Screenshot Area */}
-            <div className={`h-48 w-full bg-gradient-to-br ${project.color} relative overflow-hidden flex items-center justify-center`}>
-               <Folder size={48} className="text-white/30" />
-               <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-300" />
-               <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-slate-900/80 to-transparent" />
+            {/* Screenshot or Gradient Placeholder */}
+            <div className={`h-48 w-full relative overflow-hidden flex items-center justify-center ${!project.image ? `bg-gradient-to-br ${project.color}` : ''}`}>
+              {project.image ? (
+                <img
+                  src={project.image}
+                  alt={`${project.title} screenshot`}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              ) : (
+                <>
+                  <Folder size={48} className="text-white/30" />
+                  <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-300" />
+                </>
+              )}
+              <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-slate-900/80 to-transparent" />
             </div>
+
 
             <div className="p-5 flex flex-col flex-1">
               <div className="flex justify-between items-start mb-2">
