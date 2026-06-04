@@ -19,7 +19,6 @@ export const projectsData: Project[] = [
     description: 'A generous online presence for a local landscaping service, focusing on lead generation and service showcase.',
     problem: 'The client needed a modern way to showcase their portfolio and allow customers to request quotes easily, replacing their outdated WordPress site.',
     goal: 'Build a blazing fast, SEO-optimized landing page with an integrated lead capture form and a dynamic portfolio gallery.',
-    image: '/landscaping.png',
     technologies: ['Next.js', 'Tailwind CSS', 'Framer Motion', 'Resend'],
     features: [
       { title: 'Dynamic Gallery', description: 'Interactive before/after image sliders for landscaping projects.' },
@@ -37,7 +36,6 @@ export const projectsData: Project[] = [
     description: 'An interactive menu and reservation system for a fine dining restaurant.',
     problem: 'Managing reservations over the phone was inefficient, and the static PDF menu on their website provided a poor mobile experience.',
     goal: 'Create an app-like experience for diners to browse the menu visually and book tables in real-time.',
-    image: '/restaurant.png',
     technologies: ['React', 'TypeScript', 'Node.js', 'PostgreSQL'],
     features: [
       { title: 'Interactive Menu', description: 'Filterable menu with dietary restriction tags and high-quality image previews.' },
@@ -47,7 +45,7 @@ export const projectsData: Project[] = [
     demoUrl: 'https://demo.restaurant.test',
     githubUrl: 'https://github.com/user/restaurant',
     color: 'from-orange-500 to-red-600',
-    image: '/restraunt.png'
+    image: '/restaurant.png'
   },
   {
     id: 'church',
@@ -55,7 +53,6 @@ export const projectsData: Project[] = [
     description: 'A community hub for a local congregation, featuring live streams, event calendars, and sermon archives.',
     problem: 'During the pandemic, the church struggled to keep their congregation connected and engaged with scattered tools.',
     goal: 'Unify all digital church activities into one accessible, easy-to-manage platform.',
-    image: '/church.png',
     technologies: ['Next.js', 'Sanity CMS', 'Tailwind', 'Mux Video'],
     features: [
       { title: 'Sermon Archive', description: 'Searchable database of past sermons with audio, video, and transcriptions.' },
